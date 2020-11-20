@@ -40,10 +40,10 @@
   resolved "https://registry.yarnpkg.com/@eigenspace/argument-parser/-/argument-parser-1.0.4.tgz#9c51fc5bfca474c98841942ed8440864cd455323"
   integrity sha512-uqlYKbicmfu2B8yB+MC8b7OdhGBQYSaDy6hmfRKWZ6uFOy4dD+ysvOzgrNeFgR1BPNitLhBcsTrekyQuYx07Aw==
 
-"@eigenspace/base-http-client@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@eigenspace/base-http-client/-/base-http-client-1.0.2.tgz#49f97d91a23ad509529aff59d33e8ea5146203da"
-  integrity sha512-kVsc7AAL/2kwqhbEnyrmCVHhHgNSQBy35W9wJgP1GU+2Wtx6g07WnBkI3WJ/k2H3V5tZQQIACaDdExPPKpGH0Q==
+"@eigenspace/base-http-client@1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@eigenspace/base-http-client/-/base-http-client-1.0.3.tgz#9abeeed321d175429b485f3f1e0388a2e4a59cd7"
+  integrity sha512-1cbirc4IPHSGnxix9rVdIlccPUqG5Cn+sk/E9qMz7hhHoI5dh5BGW7XSgy8DPyyqsWz5+hJsp1Cl9H/f+drgHw==
 
 "@eigenspace/codestyle@latest":
   version "3.0.3"
@@ -124,9 +124,9 @@
     form-data "^3.0.0"
 
 "@types/node@*":
-  version "14.14.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.8.tgz#2127bd81949a95c8b7d3240f3254352d72563aec"
-  integrity sha512-z/5Yd59dCKI5kbxauAJgw6dLPzW+TNOItNE00PkpzNwUIEwdj/Lsqwq94H5DdYBX7C13aRA0CY32BK76+neEUA==
+  version "14.14.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.9.tgz#04afc9a25c6ff93da14deabd65dc44485b53c8d6"
+  integrity sha512-JsoLXFppG62tWTklIoO4knA+oDTYsmqWxHRvd4lpmfQRNhX6osheUOWETP2jMoV/2bEHuMra8Pp3Dmo/stBFcw==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -1187,16 +1187,16 @@ debug@^2.2.0, debug@^2.3.3:
     ms "2.0.0"
 
 debug@^3.1.0:
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz#e83d17de16d8a7efb7717edbe5fb10135eee629b"
-  integrity sha512-mel+jf7nrtEl5Pn1Qx46zARXKDpBbvzezse7p7LqINmdoIk8PYP5SySaxEmYv6TZ0JyEKA1hsCId6DIhgITtWQ==
+  version "3.2.7"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
+  integrity sha512-CFjzYYAi4ThfiQvizrFQevTTXHtnCqWfe7x1AhgEscTz6ZbLbfoLRLPugTQyBth6f8ZERVUSyWHFD/7Wu4t1XQ==
   dependencies:
     ms "^2.1.1"
 
 debug@^4.0.1, debug@^4.1.1:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.0.tgz#efa41cbf14fc9448075367fdaaddf82376da211e"
-  integrity sha512-jjO6JD2rKfiZQnBoRzhRTbXjHLGLfH+UtGkWLc/UXAh/rzZMyjbgn0NcfFpqT8nd1kTtFnDiJcrIFkq4UKeJVg==
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
+  integrity sha512-doEwdvm4PCeK4K3RQN2ZC2BYUBaxwLARCqZmMjtF8a51J2Rb0xpVloFRnCODwqjpwnAoao4pelN8l3RJdv3gRQ==
   dependencies:
     ms "2.1.2"
 
