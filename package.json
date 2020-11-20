@@ -1,0 +1,68 @@
+{
+    "name": "@eigenspace/nodejs-http-client",
+    "version": "1.0.0",
+    "license": "UNLICENSED",
+    "description": "The adaptor for base http client",
+    "main": "index.js",
+    "author": "Nikita Agupov <nktrsk@gmail.com>",
+    "contributors": [
+        "Anton Kalashnikov <tohasan@yandex.ru>",
+        "Daniil Sitdikov <hello.boriskas@gmail.com>",
+        "Nikita Sergeev <sergeev.nickitos@yandex.ru>",
+        "Nikita Agupov <nktrsk@gmail.com>"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eigen-space/nodejs-http-client.git"
+    },
+    "bugs": {
+        "url": "https://github.com/eigen-space/nodejs-http-client/issues"
+    },
+    "homepage": "https://github.com/eigen-space/nodejs-http-client#readme",
+    "scripts": {
+        "build": "webpack --config=config/webpack/webpack.config.prod.js --progress",
+        "lint:code": "eslint --ext .ts",
+        "lint:fix": "yarn lint:code --fix",
+        "lint:markdown": "node ./node_modules/@eigenspace/codestyle/scripts/markdown-lint.js",
+        "lint": "yarn lint:code . && yarn lint:markdown",
+        "deploy:publish": "node node_modules/@eigenspace/helper-scripts/scripts/ci/publish",
+        "hooks:pre-push": "yarn lint",
+        "hooks:pre-commit": "lint-staged",
+        "script:update-deps-remote": "npx -p @eigenspace/helper-scripts update-deps"
+    },
+    "husky": {
+        "hooks": {
+            "pre-push": "yarn hooks:pre-push",
+            "pre-commit": "lint-staged",
+            "commit-msg": "commit-linter --message=COMMIT_MESSAGE"
+        }
+    },
+    "lint-staged": {
+        "*.{ts,tsx}": [
+            "yarn lint:fix",
+            "git add"
+        ]
+    },
+    "dependencies": {
+        "@eigenspace/base-http-client": "1.0.3",
+        "form-data": "3.0.0",
+        "node-fetch": "2.6.1"
+    },
+    "devDependencies": {
+        "@eigenspace/codestyle": "latest",
+        "@eigenspace/commit-linter": "latest",
+        "@eigenspace/common-types": "0.0.20",
+        "@eigenspace/helper-scripts": "3.0.7",
+        "@types/node-fetch": "2.5.7",
+        "clean-webpack-plugin": "2.0.2",
+        "copy-webpack-plugin": "4.6.0",
+        "eslint": "7.9.0",
+        "eslint-plugin-eigenspace-script": "latest",
+        "husky": "2.3.0",
+        "lint-staged": "8.1.7",
+        "ts-loader": "6.2.1",
+        "typescript": "3.8.2",
+        "webpack": "4.32.0",
+        "webpack-cli": "4.2.0"
+    }
+}
