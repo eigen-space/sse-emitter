@@ -8,6 +8,7 @@ const libraryName = JSON.parse(packageJson).name;
 
 module.exports = {
     mode: 'production',
+    target: 'node',
     entry: [
         path.join(__dirname, '../../src/index.ts')
     ],
