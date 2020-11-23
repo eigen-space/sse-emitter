@@ -26,7 +26,7 @@
         "lint:markdown": "node ./node_modules/@eigenspace/codestyle/scripts/markdown-lint.js",
         "lint": "yarn lint:code . && yarn lint:markdown",
         "deploy:publish": "node node_modules/@eigenspace/helper-scripts/scripts/ci/publish",
-        "hooks:pre-push": "yarn lint",
+        "hooks:pre-push": "yarn lint && yarn build",
         "hooks:pre-commit": "lint-staged",
         "script:update-deps-remote": "npx -p @eigenspace/helper-scripts update-deps"
     },
@@ -44,7 +44,7 @@
         ]
     },
     "dependencies": {
-        "@eigenspace/base-http-client": "1.0.4",
+        "@eigenspace/base-http-client": "1.0.5",
         "form-data": "3.0.0",
         "node-fetch": "2.6.1"
     },
