@@ -40,10 +40,10 @@
   resolved "https://registry.yarnpkg.com/@eigenspace/argument-parser/-/argument-parser-1.0.4.tgz#9c51fc5bfca474c98841942ed8440864cd455323"
   integrity sha512-uqlYKbicmfu2B8yB+MC8b7OdhGBQYSaDy6hmfRKWZ6uFOy4dD+ysvOzgrNeFgR1BPNitLhBcsTrekyQuYx07Aw==
 
-"@eigenspace/base-http-client@1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@eigenspace/base-http-client/-/base-http-client-1.0.5.tgz#023572d72393132657016d7850540a4fabc0e082"
-  integrity sha512-hqMUUwZPir7kmphN8JeXPcZyABlYslfPElW9/FBkBVdBg+gAbdunGzZ/mIF4mxPZW9u7xI/aoq6CLxEa4HVnWQ==
+"@eigenspace/base-http-client@1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@eigenspace/base-http-client/-/base-http-client-1.0.6.tgz#c3009f6fbc89b559bbef60cc8c64e369bf7c75c4"
+  integrity sha512-lIbRe3K5ueIEU9QHVz+vTEChu1AczAw+H3EJ6ERQONCVz1+PgxZMqKMdV1WlF1Cp5h5tOPyxJzOvls5dNVa+og==
 
 "@eigenspace/codestyle@latest":
   version "3.0.3"
