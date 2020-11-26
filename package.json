@@ -1,6 +1,6 @@
 {
     "name": "@eigenspace/nodejs-http-client",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "license": "UNLICENSED",
     "description": "The adaptor for base http client",
     "main": "index.js",
