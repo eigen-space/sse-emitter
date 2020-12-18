@@ -11,7 +11,8 @@ export class NodejsRequestProvider implements RequestProvider<Response> {
         const response = await fetch(url, options);
 
         if (!response.ok) {
-            throw new HttpError(response.status, response.statusText);
+            const text = `${response.status} for ${url}\n${JSON.stringify(options, undefined, 4)}`;
+            throw new HttpError(response.status, text);
         }
 
         return new NodejsProviderResponse(response);
