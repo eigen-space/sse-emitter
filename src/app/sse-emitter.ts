@@ -5,11 +5,11 @@ import { Logger } from '@eigenspace/logger';
 import { HttpStatusCode } from '../enums/http-status-code.enum';
 import { IdUtils } from '../utils/id/id.utils';
 
-export class SseService {
+export class SseEmitter {
     private static ON_DATA_RECEIVED_EVENT = 'ON_DATA_RECEIVED';
 
     private eventEmitter = new EventEmitter();
-    private logger = new Logger({ component: 'SseService' });
+    private logger = new Logger({ component: 'SseEmitter' });
 
     constructor() {
         this.init = this.init.bind(this);
@@ -54,13 +54,13 @@ export class SseService {
             res.write(`data: ${JSON.stringify(data.data)}\n\n`);
         };
 
-        this.eventEmitter.on(SseService.ON_DATA_RECEIVED_EVENT, onDataReceived);
+        this.eventEmitter.on(SseEmitter.ON_DATA_RECEIVED_EVENT, onDataReceived);
 
         req.on('close', () => this.eventEmitter.removeListener('data', onDataReceived));
     }
 
     send(data: AnyDictionary): void {
         this.logger.info('send', `${JSON.stringify(data)}`);
-        this.eventEmitter.emit(SseService.ON_DATA_RECEIVED_EVENT, { data });
+        this.eventEmitter.emit(SseEmitter.ON_DATA_RECEIVED_EVENT, { data });
     }
 }
