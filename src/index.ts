@@ -1,1 +1,1 @@
-export { SseService } from './app/sse-service';
+export { SseEmitter } from './app/sse-emitter';
