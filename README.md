@@ -1,6 +1,6 @@
 # About
 
-This is a simple SSE service.
+This is a simple SSE service which sends events.
 1. It generates ids for messages automatically
 2. It provides endless connection
 3. It reduces any delays in data transportation
@@ -19,19 +19,25 @@ This is a simple SSE service.
 
 1. Create an instance:
     ```
-    private eventsAppService = new EventsAppService();
+    private sseService = new SseService();
     ```
-2. Assign it on a get route:
+2. Assign it on a GET-route:
     ```
-    this.app.get(environment.routes.events.base, this.eventsAppService.init.bind(this.eventsAppService));
+    this.app.get(environment.routes.events.base, this.sseService.init.bind(this.sseService));
     ```
 3. Send any messages in the following structure:
     ```
-    this.eventsAppService.send({ 
+    this.sseService.send({ 
         type: 'ON_ENTITY_SAVED', 
         content: { id: 228, name: 'Nikita' }
     });
     ```
+4. On the client side you will get a message as described above. You should
+   just add a handler on the default `message` event. For instance, on
+   browser implementation it is:
+   ```
+   this.eventSource.onmessage = (event) => console.log(event.data)
+   ``` 
 
 # Why do we have that dependencies?
 

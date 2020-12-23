@@ -1,8 +1,8 @@
 {
-    "name": "@eigenspace/sse-server",
+    "name": "@eigenspace/sse-service",
     "version": "1.0.0",
     "license": "UNLICENSED",
-    "description": "The adaptor for base http client",
+    "description": "A simple SSE service",
     "main": "index.js",
     "author": "Daniil Sitdikov <hello.boriskas@gmail.com>",
     "contributors": [
@@ -13,12 +13,12 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/eigen-space/sse-server.git"
+        "url": "git+https://github.com/eigen-space/sse-service.git"
     },
     "bugs": {
-        "url": "https://github.com/eigen-space/sse-server/issues"
+        "url": "https://github.com/eigen-space/sse-service/issues"
     },
-    "homepage": "https://github.com/eigen-space/sse-server#readme",
+    "homepage": "https://github.com/eigen-space/sse-service#readme",
     "scripts": {
         "build": "webpack --config=config/webpack/webpack.config.prod.js --progress",
         "lint:code": "eslint --ext .ts",
