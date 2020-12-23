@@ -1,12 +1,41 @@
-# About.
+# About
 
-This is a nodejs adaptor for @eigenspace/base-http-client.
+This is a simple SSE service.
+1. It generates ids for messages automatically
+2. It provides endless connection
+3. It reduces any delays in data transportation
+4. It triggers default event handler `onmessage`
+
+# Message
+
+```
+{
+    type: 'string',
+    content: Dictionary
+}
+```
+
+# Usage
+
+1. Create an instance:
+    ```
+    private eventsAppService = new EventsAppService();
+    ```
+2. Assign it on a get route:
+    ```
+    this.app.get(environment.routes.events.base, this.eventsAppService.init.bind(this.eventsAppService));
+    ```
+3. Send any messages in the following structure:
+    ```
+    this.eventsAppService.send({ 
+        type: 'ON_ENTITY_SAVED', 
+        content: { id: 228, name: 'Nikita' }
+    });
+    ```
 
 # Why do we have that dependencies?
 
-* `@eigenspace/base-http-client` - is used like base http client to wrap it.
-* `form-data` - is used for sending multipart data.
-* `node-fetch` - is used as request provider.
+* `@eigenspace/logger` - logs actions in the server.
 
 # Why do we have that dev dependencies?
 

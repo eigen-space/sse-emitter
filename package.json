@@ -1,10 +1,10 @@
 {
-    "name": "@eigenspace/nodejs-http-client",
-    "version": "1.0.8",
+    "name": "@eigenspace/sse-server",
+    "version": "1.0.0",
     "license": "UNLICENSED",
     "description": "The adaptor for base http client",
     "main": "index.js",
-    "author": "Nikita Agupov <nktrsk@gmail.com>",
+    "author": "Daniil Sitdikov <hello.boriskas@gmail.com>",
     "contributors": [
         "Anton Kalashnikov <tohasan@yandex.ru>",
         "Daniil Sitdikov <hello.boriskas@gmail.com>",
@@ -13,12 +13,12 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/eigen-space/nodejs-http-client.git"
+        "url": "git+https://github.com/eigen-space/sse-server.git"
     },
     "bugs": {
-        "url": "https://github.com/eigen-space/nodejs-http-client/issues"
+        "url": "https://github.com/eigen-space/sse-server/issues"
     },
-    "homepage": "https://github.com/eigen-space/nodejs-http-client#readme",
+    "homepage": "https://github.com/eigen-space/sse-server#readme",
     "scripts": {
         "build": "webpack --config=config/webpack/webpack.config.prod.js --progress",
         "lint:code": "eslint --ext .ts",
@@ -44,16 +44,14 @@
         ]
     },
     "dependencies": {
-        "@eigenspace/base-http-client": "1.0.6",
-        "form-data": "3.0.0",
-        "node-fetch": "2.6.1"
+        "@eigenspace/logger": "1.0.8"
     },
     "devDependencies": {
         "@eigenspace/codestyle": "latest",
         "@eigenspace/commit-linter": "latest",
-        "@eigenspace/common-types": "0.0.20",
+        "@eigenspace/common-types": "0.0.23",
         "@eigenspace/helper-scripts": "3.0.7",
-        "@types/node-fetch": "2.5.7",
+        "@types/express": "4.17.9",
         "clean-webpack-plugin": "2.0.2",
         "copy-webpack-plugin": "4.6.0",
         "eslint": "7.9.0",
