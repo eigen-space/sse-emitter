@@ -1,10 +1,11 @@
 # About
 
-This is a simple SSE service which sends events.
-1. It generates ids for messages automatically
-2. It provides endless connection
-3. It reduces any delays in data transportation
-4. It triggers default event handler `onmessage`
+This is a simple SSE emitter service which sends events.
+1. Easily integrates with Express
+2. Generates ids for messages automatically
+3. Provides endless connection
+4. Reduces any delays in data transportation
+5. Triggers default event handler `onmessage`
 
 # Message
 

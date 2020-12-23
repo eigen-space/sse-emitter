@@ -1,8 +1,8 @@
 {
-    "name": "@eigenspace/sse-service",
+    "name": "@eigenspace/sse-emitter",
     "version": "1.0.1",
     "license": "UNLICENSED",
-    "description": "A simple SSE service",
+    "description": "A simple SSE emitter",
     "main": "index.js",
     "author": "Daniil Sitdikov <hello.boriskas@gmail.com>",
     "contributors": [
@@ -13,12 +13,12 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/eigen-space/sse-service.git"
+        "url": "git+https://github.com/eigen-space/sse-emitter.git"
     },
     "bugs": {
-        "url": "https://github.com/eigen-space/sse-service/issues"
+        "url": "https://github.com/eigen-space/sse-emitter/issues"
     },
-    "homepage": "https://github.com/eigen-space/sse-service#readme",
+    "homepage": "https://github.com/eigen-space/sse-emitter#readme",
     "scripts": {
         "build": "webpack --config=config/webpack/webpack.config.prod.js --progress",
         "lint:code": "eslint --ext .ts",
