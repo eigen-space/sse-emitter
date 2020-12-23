@@ -7,28 +7,19 @@ This is a simple SSE emitter service which sends events.
 4. Reduces any delays in data transportation
 5. Triggers default event handler `onmessage`
 
-# Message
-
-```
-{
-    type: 'string',
-    content: Dictionary
-}
-```
-
 # Usage
 
 1. Create an instance:
     ```
-    private sseService = new SseService();
+    private sseEmitter = new SseEmitter();
     ```
 2. Assign it on a GET-route:
     ```
-    this.app.get(environment.routes.events.base, this.sseService.init.bind(this.sseService));
+    this.app.get(environment.routes.events.base, this.sseEmitter.init.bind(this.sseEmitter));
     ```
-3. Send any messages in the following structure:
+3. Send any messages in any structure you need:
     ```
-    this.sseService.send({ 
+    this.sseEmitter.send({ 
         type: 'ON_ENTITY_SAVED', 
         content: { id: 228, name: 'Nikita' }
     });
@@ -37,7 +28,7 @@ This is a simple SSE emitter service which sends events.
    just add a handler on the default `message` event. For instance, on
    browser implementation it is:
    ```
-   this.eventSource.onmessage = (event) => console.log(event.data)
+   this.sseEmitter.onmessage = (event) => console.log(event.data)
    ``` 
 
 # Why do we have that dependencies?
